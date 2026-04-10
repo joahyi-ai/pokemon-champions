@@ -153,6 +153,7 @@
   .header-inner{
     display:flex;align-items:center;justify-content:space-between;
     padding:12px 24px;max-width:var(--pc-grid);margin:0 auto;gap:20px;
+    position:relative;
   }
   .brand{display:flex;align-items:center;gap:12px;font-family:'Fredoka',sans-serif;font-weight:700;font-size:1.25rem;color:var(--pc-ink)}
   .brand img{width:40px;height:40px;filter:drop-shadow(0 3px 6px rgba(238,21,21,.35))}
@@ -160,6 +161,51 @@
   nav ul{list-style:none;display:flex;gap:24px;padding:0;margin:0;flex-wrap:wrap}
   nav a{color:var(--pc-ink);font-weight:600;font-size:.95rem}
   nav a:hover{color:var(--pc-red);text-decoration:none}
+
+  .nav-toggle{display:none}
+  .nav-btn{
+    display:none;cursor:pointer;
+    width:44px;height:44px;
+    border:3px solid var(--pc-ink);border-radius:12px;
+    background:#fff;
+    align-items:center;justify-content:center;
+    box-shadow:0 3px 0 var(--pc-ink);
+  }
+  .nav-btn span{
+    display:block;position:relative;
+    width:22px;height:3px;background:var(--pc-ink);border-radius:2px;
+    transition:all .25s ease;
+  }
+  .nav-btn span::before,.nav-btn span::after{
+    content:"";position:absolute;left:0;
+    width:22px;height:3px;background:var(--pc-ink);border-radius:2px;
+    transition:all .25s ease;
+  }
+  .nav-btn span::before{top:-7px}
+  .nav-btn span::after{top:7px}
+
+  @media (max-width:860px){
+    .nav-btn{display:flex}
+    nav{
+      position:absolute;top:100%;left:0;right:0;
+      background:var(--pc-paper);
+      border-bottom:4px solid var(--pc-ink);
+      box-shadow:var(--pc-shadow-lg);
+      max-height:0;overflow:hidden;
+      transition:max-height .3s ease;
+    }
+    nav ul{
+      flex-direction:column;flex-wrap:nowrap;
+      padding:8px 24px 20px;gap:0;
+    }
+    nav li{border-bottom:2px dashed var(--pc-line)}
+    nav li:last-child{border-bottom:none}
+    nav a{display:block;padding:16px 4px;font-size:1.02rem;font-family:'Fredoka',sans-serif}
+    .nav-toggle:checked ~ nav{max-height:500px}
+    .nav-toggle:checked ~ .nav-btn span{background:transparent}
+    .nav-toggle:checked ~ .nav-btn span::before{top:0;transform:rotate(45deg)}
+    .nav-toggle:checked ~ .nav-btn span::after{top:0;transform:rotate(-45deg)}
+  }
 
   /* ---------- Hero ---------- */
   .hero{
@@ -505,6 +551,8 @@
       <img src="pokeball.png" alt="Pokémon Champions Hub logo" width="40" height="40" />
       <span>Pokémon <b>Champions</b> Hub</span>
     </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true" />
+    <label for="nav-toggle" class="nav-btn" aria-label="Toggle menu"><span></span></label>
     <nav aria-label="Primary">
       <ul>
         <li><a href="#overview">Overview</a></li>
