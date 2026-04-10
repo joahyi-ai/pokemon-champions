@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pokémon Champions Guide, News & Launch Issues Hub</title>
+<meta name="description" content="Pokémon Champions news, gameplay modes, Mega Stones guide, launch bug tracker and competitive tips for the free-to-play Switch & mobile VGC game." />
+<link rel="canonical" href="https://pokemonchampions.online" />
+<meta name="robots" content="index,follow,max-image-preview:large" />
+<meta name="theme-color" content="#ee1515" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Pokémon Champions Hub" />
+<meta property="og:title" content="Pokémon Champions Guide, News & Launch Issues Hub" />
+<meta property="og:description" content="Everything about Pokémon Champions: release, gameplay, Mega Stones, launch bugs, pricing and competitive play." />
+<meta property="og:url" content="https://pokemonchampions.online" />
+<meta property="og:image" content="https://pokemonchampions.online/pokeball.png" />
+<meta property="og:locale" content="en_US" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Pokémon Champions Guide, News & Launch Issues Hub" />
+<meta name="twitter:description" content="Everything about Pokémon Champions: release, gameplay, Mega Stones, launch bugs, pricing and competitive play." />
+<meta name="twitter:image" content="https://pokemonchampions.online/pokeball.png" />
+
+<link rel="icon" type="image/png" href="pokeball.png" />
+<link rel="apple-touch-icon" href="pokeball.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://pokemonchampions.online/#website",
+      "url": "https://pokemonchampions.online",
+      "name": "Pokémon Champions Hub",
+      "description": "Pokémon Champions news, gameplay modes, Mega Stones guide and launch bug tracker.",
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "VideoGame",
+      "name": "Pokémon Champions",
+      "description": "A battle-focused Pokémon game developed by The Pokémon Works, published by Nintendo and The Pokémon Company for Nintendo Switch, Switch 2, iOS and Android.",
+      "gamePlatform": ["Nintendo Switch", "Nintendo Switch 2", "iOS", "Android"],
+      "applicationCategory": "Game",
+      "operatingSystem": "Nintendo Switch, iOS, Android",
+      "datePublished": "2026-04-08",
+      "publisher": [
+        { "@type": "Organization", "name": "Nintendo" },
+        { "@type": "Organization", "name": "The Pokémon Company" }
+      ],
+      "author": { "@type": "Organization", "name": "The Pokémon Works" },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "category": "Free to play" }
+    },
+    {
+      "@type": "ItemList",
+      "name": "Top Pokémon Champions YouTube Videos",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "url": "https://www.youtube.com/watch?v=pOfW-qdsvpU", "name": "Pokémon Champions – Overview Trailer – Nintendo Switch" },
+        { "@type": "ListItem", "position": 2, "url": "https://www.youtube.com/watch?v=zkFbx0Y-LrI", "name": "Everything You Need to Know about Pokemon Champions" },
+        { "@type": "ListItem", "position": 3, "url": "https://www.youtube.com/watch?v=AGWRN-cB2DU", "name": "My First Day in Pokemon Champions" },
+        { "@type": "ListItem", "position": 4, "url": "https://www.youtube.com/watch?v=tbXDaBQDJf8", "name": "Fun, Free, and Ugly - Pokemon Champions" },
+        { "@type": "ListItem", "position": 5, "url": "https://www.youtube.com/watch?v=SA2Mss7_Mi8", "name": "Mega Delphox Just Won The BIGGEST Pokémon Champions Tournament" },
+        { "@type": "ListItem", "position": 6, "url": "https://www.youtube.com/watch?v=3c1XZLlRMpA", "name": "BEST VGC Team for Pokemon Champions Ranked Ladder" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "When did Pokémon Champions release?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Pokémon Champions launched on April 8, 2026 for Nintendo Switch and Nintendo Switch 2, with iOS and Android versions arriving in 2026." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Pokémon Champions free to play?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes, the base game is free-to-start. Optional purchases include a $49.99/year membership, a $6.99 Starter Pack and a $9.99 Premium Battle Pass." }
+        },
+        {
+          "@type": "Question",
+          "name": "How many Mega Stones are in Pokémon Champions at launch?",
+          "acceptedAnswer": { "@type": "Answer", "text": "There are 57 Mega Stones at launch. Most are bought in the Frontier Shop for 2,000 VP each; four are exclusive to transfers from Pokémon Legends: Z-A." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+  :root{
+    --pc-red:#ee1515;
+    --pc-red-dark:#b70a0a;
+    --pc-yellow:#ffcb05;
+    --pc-blue:#2a75bb;
+    --pc-ink:#1b1b1d;
+    --pc-ink-2:#2b2b2f;
+    --pc-bone:#fdfaf3;
+    --pc-paper:#ffffff;
+    --pc-line:#e6e3d8;
+    --pc-muted:#6b6b73;
+    --pc-success:#2e8b57;
+    --pc-warn:#e88b00;
+    --pc-radius:18px;
+    --pc-shadow:0 10px 30px rgba(27,27,29,.12);
+    --pc-shadow-lg:0 20px 60px rgba(27,27,29,.18);
+    --pc-grid:1100px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    color:var(--pc-ink);
+    background:var(--pc-bone);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{font-family:'Fredoka','Inter',sans-serif;letter-spacing:-.01em;line-height:1.2;margin:0 0 .4em}
+  h1{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:700}
+  h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700}
+  h3{font-size:1.18rem;font-weight:600}
+  a{color:var(--pc-blue);text-decoration:none}
+  a:hover{text-decoration:underline}
+  p{margin:0 0 1em}
+  img{max-width:100%;display:block}
+
+  .wrap{max-width:var(--pc-grid);margin:0 auto;padding:0 24px}
+
+  /* ---------- Header ---------- */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:var(--pc-paper);
+    border-bottom:4px solid var(--pc-ink);
+    box-shadow:var(--pc-shadow);
+  }
+  .header-inner{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:12px 24px;max-width:var(--pc-grid);margin:0 auto;gap:20px;
+  }
+  .brand{display:flex;align-items:center;gap:12px;font-family:'Fredoka',sans-serif;font-weight:700;font-size:1.25rem;color:var(--pc-ink)}
+  .brand img{width:40px;height:40px;filter:drop-shadow(0 3px 6px rgba(238,21,21,.35))}
+  .brand span b{color:var(--pc-red)}
+  nav ul{list-style:none;display:flex;gap:24px;padding:0;margin:0;flex-wrap:wrap}
+  nav a{color:var(--pc-ink);font-weight:600;font-size:.95rem}
+  nav a:hover{color:var(--pc-red);text-decoration:none}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;overflow:hidden;
+    padding:72px 0 120px;
+    background:
+      radial-gradient(circle at 85% 15%,rgba(255,203,5,.25),transparent 55%),
+      radial-gradient(circle at 10% 90%,rgba(42,117,187,.18),transparent 55%),
+      linear-gradient(180deg,#fff 0%,#fff5f5 100%);
+    border-bottom:4px solid var(--pc-ink);
+  }
+  .hero::before{
+    content:"";position:absolute;inset:auto -80px -160px auto;
+    width:420px;height:420px;border-radius:50%;
+    background:
+      linear-gradient(180deg,var(--pc-red) 0 49%,var(--pc-ink) 49% 54%,#fff 54% 100%);
+    box-shadow:0 30px 80px rgba(0,0,0,.15);
+    opacity:.9;
+  }
+  .hero::after{
+    content:"";position:absolute;left:50%;top:calc(50% + 20px);transform:translate(-50%,-50%);
+    width:86px;height:86px;border-radius:50%;
+    background:#fff;border:6px solid var(--pc-ink);
+    box-shadow:inset 0 0 0 10px #fff,inset 0 0 0 16px var(--pc-ink);
+    display:none;
+  }
+  .hero-inner{position:relative;z-index:2}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    background:var(--pc-ink);color:var(--pc-yellow);
+    padding:7px 14px;border-radius:999px;
+    font-family:'Fredoka',sans-serif;font-weight:600;font-size:.85rem;letter-spacing:.04em;
+    margin-bottom:22px;text-transform:uppercase;
+  }
+  .eyebrow::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--pc-red);box-shadow:0 0 0 2px var(--pc-yellow)}
+  .hero h1 span{color:var(--pc-red)}
+  .hero p.lede{font-size:1.15rem;max-width:640px;color:var(--pc-ink-2)}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:14px 22px;border-radius:999px;
+    font-family:'Fredoka',sans-serif;font-weight:600;font-size:1rem;
+    border:3px solid var(--pc-ink);cursor:pointer;text-decoration:none;
+    transition:transform .15s ease,box-shadow .15s ease;
+  }
+  .btn:hover{transform:translateY(-2px);text-decoration:none}
+  .btn-primary{background:var(--pc-red);color:#fff;box-shadow:0 6px 0 var(--pc-ink)}
+  .btn-primary:hover{box-shadow:0 8px 0 var(--pc-ink)}
+  .btn-ghost{background:#fff;color:var(--pc-ink);box-shadow:0 6px 0 var(--pc-ink)}
+
+  /* ---------- Stats strip ---------- */
+  .stats{
+    max-width:var(--pc-grid);margin:-72px auto 0;padding:0 24px;position:relative;z-index:5;
+  }
+  .stats-grid{
+    display:grid;gap:16px;
+    grid-template-columns:repeat(4,1fr);
+    background:var(--pc-paper);
+    border:4px solid var(--pc-ink);
+    border-radius:var(--pc-radius);
+    padding:24px;
+    box-shadow:var(--pc-shadow-lg);
+  }
+  .stat{padding:10px 14px;border-right:2px dashed var(--pc-line)}
+  .stat:last-child{border-right:none}
+  .stat dt{font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--pc-muted);font-weight:600}
+  .stat dd{margin:6px 0 0;font-family:'Fredoka',sans-serif;font-size:1.15rem;font-weight:700;color:var(--pc-ink)}
+  .stat dd small{display:block;font-family:'Inter',sans-serif;font-weight:500;font-size:.82rem;color:var(--pc-muted);margin-top:2px}
+  @media (max-width:780px){
+    .stats-grid{grid-template-columns:repeat(2,1fr)}
+    .stat{border-right:none;border-bottom:2px dashed var(--pc-line);padding-bottom:14px}
+    .stat:nth-last-child(-n+2){border-bottom:none}
+  }
+
+  /* ---------- Sections ---------- */
+  section{padding:84px 0}
+  .section-head{max-width:720px;margin-bottom:42px}
+  .section-head .tag{
+    font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--pc-red);margin-bottom:10px;display:inline-block
+  }
+  .section-head h2 em{font-style:normal;color:var(--pc-red)}
+  .section-head p{color:var(--pc-muted);font-size:1.05rem;max-width:560px}
+
+  /* Cards */
+  .cards{display:grid;gap:22px;grid-template-columns:repeat(3,1fr)}
+  @media (max-width:900px){.cards{grid-template-columns:1fr 1fr}}
+  @media (max-width:640px){.cards{grid-template-columns:1fr}}
+  .card{
+    background:var(--pc-paper);
+    border:3px solid var(--pc-ink);
+    border-radius:var(--pc-radius);
+    padding:26px 24px;
+    box-shadow:0 6px 0 var(--pc-ink);
+    transition:transform .2s ease,box-shadow .2s ease;
+    position:relative;overflow:hidden;
+  }
+  .card:hover{transform:translateY(-3px);box-shadow:0 9px 0 var(--pc-ink)}
+  .card h3{display:flex;align-items:center;gap:10px}
+  .card .num{
+    display:inline-flex;align-items:center;justify-content:center;
+    width:30px;height:30px;border-radius:50%;background:var(--pc-red);color:#fff;
+    font-family:'Fredoka';font-weight:700;font-size:.95rem;flex-shrink:0;
+  }
+  .card ul{margin:12px 0 0;padding-left:18px;color:var(--pc-ink-2)}
+  .card li{margin-bottom:6px}
+  .card .pill{
+    display:inline-block;background:var(--pc-yellow);color:var(--pc-ink);
+    border:2px solid var(--pc-ink);border-radius:999px;
+    padding:4px 12px;font-size:.78rem;font-weight:700;margin-bottom:12px;
+  }
+
+  /* ---------- Mega Stones table ---------- */
+  .mega-wrap{
+    background:linear-gradient(180deg,#fff 0,#fff8f8 100%);
+    border:3px solid var(--pc-ink);border-radius:var(--pc-radius);
+    box-shadow:var(--pc-shadow);overflow:hidden;
+  }
+  .mega-head{
+    display:grid;grid-template-columns:1fr 1fr;gap:0;
+    background:var(--pc-ink);color:#fff;
+  }
+  .mega-head > div{padding:24px 26px;border-right:1px solid #333}
+  .mega-head > div:last-child{border-right:none}
+  .mega-head h3{color:var(--pc-yellow);margin-bottom:4px}
+  .mega-head p{color:#cfcfd4;margin:0;font-size:.95rem}
+  .mega-body{display:grid;grid-template-columns:repeat(2,1fr)}
+  @media (max-width:780px){
+    .mega-head,.mega-body{grid-template-columns:1fr}
+  }
+  .mega-cell{padding:26px;border-right:2px dashed var(--pc-line);border-bottom:2px dashed var(--pc-line)}
+  .mega-cell:nth-child(2n){border-right:none}
+  .mega-cell:nth-last-child(-n+2){border-bottom:none}
+  @media (max-width:780px){
+    .mega-cell{border-right:none}
+    .mega-cell:nth-last-child(2){border-bottom:2px dashed var(--pc-line)}
+  }
+  .mega-cell h4{
+    font-family:'Fredoka';font-weight:700;font-size:1.08rem;margin:0 0 8px;
+    display:flex;align-items:center;gap:10px;
+  }
+  .mega-cell h4::before{
+    content:"";width:14px;height:14px;border-radius:50%;
+    background:linear-gradient(180deg,var(--pc-red) 50%,#fff 50%);
+    border:2px solid var(--pc-ink);flex-shrink:0;
+  }
+  .mega-cell .price{
+    display:inline-block;background:var(--pc-yellow);border:2px solid var(--pc-ink);
+    border-radius:6px;padding:2px 8px;font-weight:700;font-family:'Fredoka';font-size:.85rem;
+  }
+
+  /* ---------- Launch timeline ---------- */
+  .timeline{position:relative;padding-left:32px;border-left:4px solid var(--pc-red)}
+  .timeline::before{
+    content:"";position:absolute;left:-14px;top:0;
+    width:24px;height:24px;border-radius:50%;
+    background:var(--pc-red);border:4px solid var(--pc-bone);
+  }
+  .tl-item{position:relative;margin-bottom:34px;padding-left:12px}
+  .tl-item::before{
+    content:"";position:absolute;left:-42px;top:6px;
+    width:18px;height:18px;border-radius:50%;
+    background:#fff;border:4px solid var(--pc-red);
+  }
+  .tl-item h3{margin-bottom:6px}
+  .tl-item .meta{font-size:.85rem;color:var(--pc-muted);font-weight:600;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+  .tl-item .meta .src{
+    background:var(--pc-ink);color:#fff;padding:2px 10px;border-radius:999px;
+    font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;
+  }
+  .tl-item blockquote{
+    margin:10px 0 0;padding:14px 18px;background:#fff;
+    border-left:4px solid var(--pc-yellow);
+    border-radius:0 10px 10px 0;color:var(--pc-ink-2);
+    font-style:italic;box-shadow:var(--pc-shadow);
+  }
+
+  /* ---------- Pricing ---------- */
+  .price-grid{display:grid;gap:22px;grid-template-columns:repeat(3,1fr)}
+  @media (max-width:900px){.price-grid{grid-template-columns:1fr}}
+  .price-card{
+    background:#fff;border:3px solid var(--pc-ink);border-radius:var(--pc-radius);
+    padding:30px 26px;box-shadow:0 6px 0 var(--pc-ink);
+    position:relative;overflow:hidden;
+  }
+  .price-card.featured{background:var(--pc-ink);color:#fff}
+  .price-card.featured h3,.price-card.featured .amt{color:var(--pc-yellow)}
+  .price-card.featured li{color:#cfcfd4}
+  .price-card .amt{font-family:'Fredoka';font-size:2.2rem;font-weight:700;color:var(--pc-red);margin:4px 0 4px}
+  .price-card .amt small{font-size:.9rem;color:var(--pc-muted);font-weight:500}
+  .price-card.featured .amt small{color:#a5a5ac}
+  .price-card ul{list-style:none;padding:0;margin:14px 0 0}
+  .price-card li{padding:8px 0;border-bottom:1px dashed var(--pc-line);font-size:.95rem;display:flex;gap:8px;align-items:flex-start}
+  .price-card.featured li{border-bottom-color:#333}
+  .price-card li::before{content:"◉";color:var(--pc-red);font-size:.8rem;margin-top:4px}
+  .price-card.featured li::before{color:var(--pc-yellow)}
+  .price-footer{
+    margin-top:32px;
+    background:#fff;
+    border:3px solid var(--pc-ink);
+    border-radius:var(--pc-radius);
+    box-shadow:0 6px 0 var(--pc-ink);
+    padding:22px 28px;
+    display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;
+    position:relative;overflow:hidden;
+  }
+  .price-footer::before{
+    content:"";position:absolute;left:-30px;top:50%;transform:translateY(-50%);
+    width:80px;height:80px;border-radius:50%;
+    background:linear-gradient(180deg,var(--pc-red) 50%,#fff 50%);
+    border:3px solid var(--pc-ink);opacity:.18;
+  }
+  .price-footer .pf-text{position:relative;z-index:2}
+  .price-footer .pf-text strong{font-family:'Fredoka';font-size:1.05rem;display:block;margin-bottom:2px}
+  .price-footer .pf-text span{font-size:.9rem;color:var(--pc-muted)}
+  .price-footer .btn-buy{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:13px 24px;border-radius:999px;
+    background:var(--pc-red);color:#fff;
+    border:3px solid var(--pc-ink);
+    font-family:'Fredoka',sans-serif;font-weight:600;font-size:.98rem;
+    box-shadow:0 4px 0 var(--pc-ink);text-decoration:none;
+    transition:transform .15s ease,box-shadow .15s ease;
+    position:relative;z-index:2;flex-shrink:0;
+  }
+  .price-footer .btn-buy:hover{transform:translateY(-2px);box-shadow:0 6px 0 var(--pc-ink);text-decoration:none}
+  .price-footer .btn-buy::after{content:"↗";font-size:1rem}
+
+  /* ---------- FAQ ---------- */
+  .faq{display:grid;gap:14px}
+  .faq details{
+    background:#fff;border:3px solid var(--pc-ink);border-radius:14px;
+    padding:18px 22px;box-shadow:0 4px 0 var(--pc-ink);cursor:pointer;
+  }
+  .faq details[open]{background:#fffef7}
+  .faq summary{font-family:'Fredoka';font-weight:600;font-size:1.05rem;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{
+    content:"+";font-size:1.6rem;color:var(--pc-red);font-weight:700;
+    transition:transform .2s ease;
+  }
+  .faq details[open] summary::after{transform:rotate(45deg)}
+  .faq p{margin:12px 0 0;color:var(--pc-ink-2)}
+
+  /* ---------- Sources ---------- */
+  .sources-wrap{background:var(--pc-ink);color:#fff;padding:84px 0;border-top:4px solid var(--pc-ink)}
+  .sources-wrap .tag{color:var(--pc-yellow)}
+  .sources-wrap h2{color:#fff}
+  .sources-wrap .section-head p{color:#a5a5ac}
+  .src-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  @media (max-width:900px){.src-grid{grid-template-columns:1fr 1fr}}
+  @media (max-width:640px){.src-grid{grid-template-columns:1fr}}
+  .src-item{
+    background:#26262a;border:2px solid #3a3a40;border-radius:12px;
+    padding:16px 18px;transition:all .2s ease;display:block;color:#fff;
+  }
+  .src-item:hover{background:#2f2f35;border-color:var(--pc-red);text-decoration:none;transform:translateY(-2px)}
+  .src-item .site{font-size:.72rem;color:var(--pc-yellow);text-transform:uppercase;letter-spacing:.08em;font-weight:700}
+  .src-item .title{font-family:'Fredoka';font-weight:500;font-size:.98rem;margin-top:4px;color:#fff}
+
+  /* ---------- Footer ---------- */
+  footer{background:#0f0f11;color:#a5a5ac;padding:40px 0;text-align:center;font-size:.88rem}
+  footer .brand{justify-content:center;color:#fff;margin-bottom:10px}
+  footer .brand img{filter:brightness(1.1)}
+  footer a{color:var(--pc-yellow)}
+  footer .disclaimer{max-width:640px;margin:14px auto 0;font-size:.78rem;color:#6b6b73;line-height:1.6}
+
+  /* ---------- Helpers ---------- */
+  .pokestripe{
+    height:12px;
+    background:
+      linear-gradient(90deg,var(--pc-red) 0 50%,#fff 50% 100%);
+    border-top:3px solid var(--pc-ink);
+    border-bottom:3px solid var(--pc-ink);
+    position:relative;
+  }
+  .pokestripe::after{
+    content:"";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+    width:22px;height:22px;border-radius:50%;background:#fff;
+    border:4px solid var(--pc-ink);
+    box-shadow:inset 0 0 0 3px #fff,inset 0 0 0 5px var(--pc-ink);
+  }
+
+  /* ---------- Videos ---------- */
+  .videos{display:grid;gap:22px;grid-template-columns:repeat(3,1fr)}
+  @media (max-width:900px){.videos{grid-template-columns:1fr 1fr}}
+  @media (max-width:640px){.videos{grid-template-columns:1fr}}
+  .video-card{
+    background:#fff;border:3px solid var(--pc-ink);border-radius:var(--pc-radius);
+    box-shadow:0 6px 0 var(--pc-ink);overflow:hidden;display:block;color:inherit;
+    transition:transform .2s ease,box-shadow .2s ease;
+  }
+  .video-card:hover{transform:translateY(-3px);box-shadow:0 9px 0 var(--pc-ink);text-decoration:none}
+  .video-thumb{
+    position:relative;aspect-ratio:16/9;background:#000;overflow:hidden;
+    border-bottom:3px solid var(--pc-ink);
+  }
+  .video-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+  .video-thumb .play{
+    position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+    background:rgba(0,0,0,.25);transition:background .2s ease;
+  }
+  .video-card:hover .video-thumb .play{background:rgba(0,0,0,.1)}
+  .video-thumb .play::before{
+    content:"";width:68px;height:48px;border-radius:14px;
+    background:var(--pc-red);border:3px solid var(--pc-ink);
+    box-shadow:0 4px 0 var(--pc-ink);
+  }
+  .video-thumb .play::after{
+    content:"";position:absolute;top:50%;left:50%;transform:translate(-40%,-50%);
+    border-left:18px solid #fff;border-top:11px solid transparent;border-bottom:11px solid transparent;
+  }
+  .video-thumb .duration{
+    position:absolute;bottom:10px;right:10px;
+    background:var(--pc-ink);color:#fff;
+    font-family:'Fredoka';font-size:.78rem;font-weight:600;
+    padding:3px 9px;border-radius:6px;border:2px solid #fff;
+  }
+  .video-meta{padding:18px 20px 20px}
+  .video-meta h3{
+    font-family:'Fredoka';font-weight:600;font-size:1.02rem;line-height:1.3;
+    margin:0 0 10px;color:var(--pc-ink);
+    display:-webkit-box;-webkit-line-clamp:2;line-clamp:2;-webkit-box-orient:vertical;
+    overflow:hidden;
+  }
+  .video-meta .channel{
+    display:flex;align-items:center;gap:8px;
+    font-size:.85rem;color:var(--pc-muted);font-weight:600;
+  }
+  .video-meta .channel::before{
+    content:"";width:18px;height:18px;border-radius:50%;
+    background:linear-gradient(180deg,var(--pc-red) 50%,#fff 50%);
+    border:2px solid var(--pc-ink);flex-shrink:0;
+  }
+  .video-meta .views{color:var(--pc-red);font-weight:700}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="brand" href="./">
+      <img src="pokeball.png" alt="Pokémon Champions Hub logo" width="40" height="40" />
+      <span>Pokémon <b>Champions</b> Hub</span>
+    </a>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#modes">Modes</a></li>
+        <li><a href="#mega">Mega Stones</a></li>
+        <li><a href="#launch">Launch</a></li>
+        <li><a href="#videos">Videos</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap hero-inner">
+    <span class="eyebrow">Now live on Nintendo Switch &amp; Switch 2</span>
+    <h1 id="hero-title">Everything About <span>Pokémon&nbsp;Champions</span>, in One Hub.</h1>
+    <p class="lede">The free-to-play, battle-focused Pokémon game from The Pokémon Works — gameplay modes, the full Mega Stones guide, launch bug tracker, pricing and competitive meta, all sourced from launch-week coverage.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#overview">Start Reading →</a>
+      <a class="btn btn-ghost" href="#launch">See Launch Issues</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATS STRIP ============ -->
+<div class="stats">
+  <dl class="stats-grid">
+    <div class="stat"><dt>Release Date</dt><dd>Apr 8, 2026<small>Mobile • 2026</small></dd></div>
+    <div class="stat"><dt>Platforms</dt><dd>Switch / Switch 2<small>iOS &amp; Android</small></dd></div>
+    <div class="stat"><dt>Price</dt><dd>Free-to-Start<small>In-app purchases</small></dd></div>
+    <div class="stat"><dt>Mega Stones</dt><dd>57 at Launch<small>From 2,000 VP</small></dd></div>
+  </dl>
+</div>
+
+<!-- ============ OVERVIEW ============ -->
+<section id="overview">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag">Overview</span>
+      <h2>What is <em>Pokémon Champions</em>?</h2>
+      <p>A new, battle-focused Pokémon title built for the competitive VGC scene — and the first game from The Pokémon Works, the joint venture between The Pokémon Company and ILCA.</p>
+    </div>
+
+    <div class="cards">
+      <article class="card">
+        <span class="pill">The Basics</span>
+        <h3><span class="num">1</span>Developer &amp; Publisher</h3>
+        <ul>
+          <li>Developed by <b>The Pokémon Works</b> (their debut title)</li>
+          <li>Published by <b>Nintendo</b> worldwide on Switch</li>
+          <li>Mobile versions by <b>The Pokémon Company</b></li>
+          <li>Built on the <b>Unity</b> engine</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <span class="pill">Gameplay</span>
+        <h3><span class="num">2</span>Battle-First Design</h3>
+        <ul>
+          <li>Turn-based with familiar <b>types, abilities, moves</b></li>
+          <li>Similar in feel to the classic <b>Pokémon Stadium</b> series</li>
+          <li>Supports <b>Mega Evolution</b> via the Omni Ring</li>
+          <li><b>Terastallization</b> planned for a future update</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <span class="pill">Ecosystem</span>
+        <h3><span class="num">3</span>Competitive Home</h3>
+        <ul>
+          <li>Replaces mainline games at <b>VGC 2026</b></li>
+          <li>First official event: Malaysia Master Ball League (May 9–10)</li>
+          <li>Full <b>Pokémon HOME</b> integration</li>
+          <li>Cross-platform battles between Switch and mobile</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div class="pokestripe" aria-hidden="true"></div>
+
+<!-- ============ BATTLE MODES ============ -->
+<section id="modes" style="background:#fff">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag">Battle Modes</span>
+      <h2>Three Ways to <em>Battle</em></h2>
+      <p>Every mode supports both Single and Double Battles. Victory Points (VP) drive progression and can only be earned through play — not purchased.</p>
+    </div>
+
+    <div class="cards">
+      <article class="card">
+        <span class="pill" style="background:#ffd3d3">Ranked</span>
+        <h3><span class="num">★</span>Ranked Battles</h3>
+        <p>Global matchmaking where your rank shifts with every result. The primary source of <b>Victory Points</b>. New regulations rotate every few seasons to refresh the meta.</p>
+      </article>
+
+      <article class="card">
+        <span class="pill" style="background:#d3e8ff">Casual</span>
+        <h3><span class="num">✦</span>Casual Battles</h3>
+        <p>Low-pressure matches with no rank impact. Perfect for testing new teams, unusual Mega Evolutions or niche strategies without worrying about your ladder standing.</p>
+      </article>
+
+      <article class="card">
+        <span class="pill" style="background:#fff3c4">Private</span>
+        <h3><span class="num">♦</span>Private Battles</h3>
+        <p>Custom rooms for battling friends and family online or via local wireless. Ideal for scrims, tournaments and teaching newer players the ropes.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MEGA STONES ============ -->
+<section id="mega">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag">Guide</span>
+      <h2>How to Get <em>Mega Stones</em></h2>
+      <p>There are <b>57 Mega Stones</b> available at launch. Most can be bought outright, but a handful are locked behind tutorials or transfers from <i>Pokémon Legends: Z-A</i>.</p>
+    </div>
+
+    <div class="mega-wrap">
+      <div class="mega-head">
+        <div>
+          <h3>Equipping</h3>
+          <p>Box → Pokémon → Give an item to hold → press <b>R</b> to the Mega Stones tab. In battle, after selecting Fight, press <b>R</b> to Mega Evolve — once per battle only.</p>
+        </div>
+        <div>
+          <h3>Getting Them</h3>
+          <p>Most stones come from one of four routes below. Pricing and exclusivity vary by stone — plan your roster accordingly.</p>
+        </div>
+      </div>
+      <div class="mega-body">
+        <div class="mega-cell">
+          <h4>Frontier Shop</h4>
+          <p>The primary source. Each Mega Stone costs <span class="price">2,000 VP</span> and can be used indefinitely once purchased. Accessible directly from the main menu.</p>
+        </div>
+        <div class="mega-cell">
+          <h4>Mega Evolution Tutorials</h4>
+          <p>Some stones are <b>not</b> available in the Frontier Shop — they only unlock through Battle Tutorials under the Train menu.</p>
+        </div>
+        <div class="mega-cell">
+          <h4>Legends: Z-A Transfers</h4>
+          <p>Four stones are <b>exclusive</b> to transfers from <i>Pokémon Legends: Z-A</i>: <b>Chesnaught, Delphox, Greninja</b> and <b>Eternal Flower Floette</b>. Accept the Pokémon and the stone lands in your mailbox.</p>
+        </div>
+        <div class="mega-cell">
+          <h4>Premium Battle Pass</h4>
+          <p>The paid track of the Battle Pass contains stones that overlap with — or extend — the Frontier Shop catalogue. Also the source for season rewards like Dragoninite.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LAUNCH ISSUES ============ -->
+<section id="launch" style="background:#fff5f5;border-top:4px solid var(--pc-ink);border-bottom:4px solid var(--pc-ink)">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag">Launch Tracker</span>
+      <h2>A <em>Rocky Launch</em>, In Detail</h2>
+      <p>Reviews called the launch "like a beta test." Here's every confirmed issue and developer response, sourced from IGN, Kotaku, GameSpot and Reddit.</p>
+    </div>
+
+    <div class="timeline">
+
+      <div class="tl-item">
+        <h3>Switch 2 Dock Resolution Bug</h3>
+        <div class="meta"><span class="src">IGN</span> Apr 9, 2026 · Tom Phillips</div>
+        <p>Docked Switch 2 players are stuck at 1080p until they <b>physically undock and re-dock the console</b> — after which the game finally switches to 4K (still locked at 30fps). The workaround must be repeated on every cold boot.</p>
+        <blockquote>"ILCA and Unity. What a duo." — <b>Joe Merrick</b>, Serebii.net</blockquote>
+      </div>
+
+      <div class="tl-item">
+        <h3>Pokémon HOME Transfer Error 9007</h3>
+        <div class="meta"><span class="src">Kotaku</span> Apr 8, 2026 · Kenneth Shepard</div>
+        <p>Transferring Pokémon from HOME triggers an error that leaves creatures registered as "visiting" Champions — they <b>cannot be recovered or used</b> and get stuck in limbo. Temporary fixes include reinstalling HOME or clearing caches, but nothing worked universally. Developers later confirmed the bug has been patched.</p>
+      </div>
+
+      <div class="tl-item">
+        <h3>"Trans Gallade" Tutorial Bug</h3>
+        <div class="meta"><span class="src">GameSpot</span> Apr 9, 2026 · Chris Compendio</div>
+        <p>A tutorial battle featured a <b>female Gallade</b> — which is technically impossible in Pokémon lore, since Gallade only evolves from male Kirlia. The community celebrated the accidental queer icon before devs confirmed it as a bug to be patched.</p>
+        <blockquote>"It's over guys they're taking trans Gallade from us." — @IronValiantOU on X</blockquote>
+      </div>
+
+      <div class="tl-item">
+        <h3>Confirmed Bug List From Developers</h3>
+        <div class="meta"><span class="src">Pokémon Works</span> Apr 9, 2026 · Official statement</div>
+        <p>Alongside "sincere apologies," the team published a known-issues list:</p>
+        <ul>
+          <li><b>Lightning Rod</b> ability not working correctly</li>
+          <li><b>Leech Seed</b> move description is wrong</li>
+          <li>Mega Evolution triggers in the <b>wrong order</b> during battle</li>
+          <li>Hovering Mega Evolve + pressing B <b>soft-locks</b> move selection</li>
+          <li>Several tutorial Pokémon have incorrect genders (see above)</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <h3>Community Reaction</h3>
+        <div class="meta"><span class="src">Reddit</span> r/NintendoSwitch · 240+ comments</div>
+        <p>Top comment captures the prevailing mood across r/NintendoSwitch, r/pokemon and r/stunfisk:</p>
+        <blockquote>"Is there an industry-wide removal of QA, and just letting players do QA for free?" — u/Dairunt · 1K+ upvotes</blockquote>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ VIDEOS ============ -->
+<section id="videos" style="background:#fff">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag">Watch</span>
+      <h2>Top <em>YouTube</em> Coverage</h2>
+      <p>The most-watched Pokémon Champions videos from Google's first page — covering the official trailer, launch impressions, competitive analysis and early meta takes.</p>
+    </div>
+
+    <div class="videos">
+
+      <a class="video-card" href="https://www.youtube.com/watch?v=pOfW-qdsvpU" target="_blank" rel="noopener">
+        <div class="video-thumb">
+          <img src="https://i.ytimg.com/vi/pOfW-qdsvpU/hqdefault.jpg" alt="Pokémon Champions Overview Trailer thumbnail" loading="lazy" />
+          <div class="play"></div>
+          <div class="duration">6:09</div>
+        </div>
+        <div class="video-meta">
+          <h3>Pokémon Champions – Overview Trailer – Nintendo Switch</h3>
+          <div class="channel">Nintendo of America · <span class="views">1.6M views</span></div>
+        </div>
+      </a>
+
+      <a class="video-card" href="https://www.youtube.com/watch?v=zkFbx0Y-LrI" target="_blank" rel="noopener">
+        <div class="video-thumb">
+          <img src="https://i.ytimg.com/vi/zkFbx0Y-LrI/hqdefault.jpg" alt="Everything You Need to Know about Pokemon Champions thumbnail" loading="lazy" />
+          <div class="play"></div>
+          <div class="duration">11:27</div>
+        </div>
+        <div class="video-meta">
+          <h3>Everything You Need to Know about Pokemon Champions</h3>
+          <div class="channel">WolfeyVGC · <span class="views">473K views</span></div>
+        </div>
+      </a>
+
+      <a class="video-card" href="https://www.youtube.com/watch?v=AGWRN-cB2DU" target="_blank" rel="noopener">
+        <div class="video-thumb">
+          <img src="https://i.ytimg.com/vi/AGWRN-cB2DU/hqdefault.jpg" alt="WolfeyVGC My First Day in Pokemon Champions thumbnail" loading="lazy" />
+          <div class="play"></div>
+          <div class="duration">30:01</div>
+        </div>
+        <div class="video-meta">
+          <h3>My First Day in Pokemon Champions</h3>
+          <div class="channel">WolfeyVGC · <span class="views">1.2M views</span></div>
+        </div>
+      </a>
+
+      <a class="video-card" href="https://www.youtube.com/watch?v=tbXDaBQDJf8" target="_blank" rel="noopener">
+        <div class="video-thumb">
+          <img src="https://i.ytimg.com/vi/tbXDaBQDJf8/hqdefault.jpg" alt="Fun, Free, and Ugly - Pokemon Champions thumbnail" loading="lazy" />
+          <div class="play"></div>
+        </div>
+        <div class="video-meta">
+          <h3>Fun, Free, and Ugly - Pokemon Champions</h3>
+          <div class="channel">Austin John Plays · <span class="views">295K views</span></div>
+        </div>
+      </a>
+
+      <a class="video-card" href="https://www.youtube.com/watch?v=SA2Mss7_Mi8" target="_blank" rel="noopener">
+        <div class="video-thumb">
+          <img src="https://i.ytimg.com/vi/SA2Mss7_Mi8/hqdefault.jpg" alt="Mega Delphox Wins Biggest Tournament thumbnail" loading="lazy" />
+          <div class="play"></div>
+        </div>
+        <div class="video-meta">
+          <h3>Mega Delphox Just Won The BIGGEST Pokémon Champions Tournament!</h3>
+          <div class="channel">ScooteezyVGC · <span class="views">13K views</span></div>
+        </div>
+      </a>
+
+      <a class="video-card" href="https://www.youtube.com/watch?v=3c1XZLlRMpA" target="_blank" rel="noopener">
+        <div class="video-thumb">
+          <img src="https://i.ytimg.com/vi/3c1XZLlRMpA/hqdefault.jpg" alt="Best VGC Team for Pokemon Champions Ranked Ladder thumbnail" loading="lazy" />
+          <div class="play"></div>
+        </div>
+        <div class="video-meta">
+          <h3>BEST VGC Team for Pokemon Champions Ranked Ladder for newer players!</h3>
+          <div class="channel">THATSAplusONE · <span class="views">43K views</span></div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRICING ============ -->
+<section id="pricing">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag">Pricing</span>
+      <h2>Free to Start, <em>Paid to Expand</em></h2>
+      <p>Champions is free-to-play but layered with optional purchases. Here's the full monetisation breakdown disclosed by Nintendo and IGN at launch.</p>
+    </div>
+
+    <div class="price-grid">
+      <div class="price-card">
+        <h3>Starter Pack</h3>
+        <div class="amt">$6.99<small> &nbsp;one-off</small></div>
+        <ul>
+          <li>Expanded Pokémon storage</li>
+          <li>Pairs with the base free game</li>
+          <li>Entry-level purchase for casual players</li>
+        </ul>
+      </div>
+
+      <div class="price-card featured">
+        <h3>Annual Membership</h3>
+        <div class="amt">$49.99<small> /year — or $4.99/mo</small></div>
+        <ul>
+          <li>Extra Pokémon box capacity</li>
+          <li>More Battle Teams usable at once</li>
+          <li>Exclusive missions</li>
+          <li>Exclusive battle music tracks</li>
+        </ul>
+      </div>
+
+      <div class="price-card">
+        <h3>Premium Battle Pass</h3>
+        <div class="amt">$9.99<small> &nbsp;per season</small></div>
+        <ul>
+          <li>Extra seasonal rewards</li>
+          <li>Exclusive trainer clothing</li>
+          <li>Paid-track Mega Stones (e.g. Dragoninite)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="price-footer">
+      <div class="pf-text">
+        <strong>All in-app purchases are handled on the official site.</strong>
+        <span>Download the game and manage memberships, Battle Passes and bundles from pokemon.com.</span>
+      </div>
+      <a class="btn-buy" href="https://champions.pokemon.com/en-us/" target="_blank" rel="noopener">Visit Official Site</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq" style="background:#fff;border-top:4px solid var(--pc-ink)">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag">FAQ</span>
+      <h2>People Also <em>Ask</em></h2>
+      <p>Quick answers sourced from the official site, Wikipedia and launch coverage.</p>
+    </div>
+
+    <div class="faq">
+      <details open>
+        <summary>When did Pokémon Champions release?</summary>
+        <p>Pokémon Champions launched on <b>April 8, 2026</b> for Nintendo Switch and Nintendo Switch 2. iOS and Android versions are scheduled for later in 2026, and all platforms share a single cross-play ecosystem.</p>
+      </details>
+
+      <details>
+        <summary>Is Pokémon Champions free to play?</summary>
+        <p>Yes. The base game is free-to-start. Optional paid items include a <b>$49.99/year</b> (or $4.99/month) membership, a <b>$6.99</b> Starter Pack and a <b>$9.99</b> Premium Battle Pass per season.</p>
+      </details>
+
+      <details>
+        <summary>How many Mega Stones are in Pokémon Champions at launch?</summary>
+        <p>There are <b>57 Mega Stones</b> at launch. Most are bought in the Frontier Shop for <b>2,000 VP</b> each. Four are exclusive to Pokémon transfers from <i>Pokémon Legends: Z-A</i>: Chesnaught, Delphox, Greninja and Eternal Flower Floette.</p>
+      </details>
+
+      <details>
+        <summary>Can I transfer Pokémon from Pokémon HOME?</summary>
+        <p>Yes — Pokémon HOME integration is built in and supports creatures from Pokémon Scarlet/Violet, Legends: Z-A and Pokémon GO. At launch a <b>9007 error</b> trapped some Pokémon in limbo, but the developers confirmed the bug has since been patched.</p>
+      </details>
+
+      <details>
+        <summary>Does Pokémon Champions support Terastallization?</summary>
+        <p>Not at launch. Mega Evolution is the signature mechanic for now, using the in-game <b>Omni Ring</b>. Terastallization is expected to arrive in a future update as new seasonal regulations roll out.</p>
+      </details>
+
+      <details>
+        <summary>Will Champions replace mainline games at VGC events?</summary>
+        <p>Yes. Starting with the Malaysia <b>Master Ball League (May 9–10, 2026)</b> and the Indianapolis Regional Championships (May 29–31, 2026), Champions becomes the official VGC software, replacing Scarlet and Violet for competitive events.</p>
+      </details>
+
+      <details>
+        <summary>Why are players complaining about Switch 2 graphics?</summary>
+        <p>A launch bug locks docked Switch 2 play at 1080p until you physically undock and re-dock the console, after which the game renders at 4K (still capped at 30fps). The workaround must be repeated every cold boot.</p>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ SOURCES ============ -->
+<div class="sources-wrap" id="sources">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag">Sources</span>
+      <h2>Everything on This Page, <em>Sourced</em>.</h2>
+      <p>Every fact is drawn from first-party sites, Wikipedia and launch-week reporting. Links open in a new tab.</p>
+    </div>
+    <div class="src-grid">
+      <a class="src-item" href="https://champions.pokemon.com/en-us/" target="_blank" rel="noopener"><div class="site">Official Site</div><div class="title">Pokémon Champions Home</div></a>
+      <a class="src-item" href="https://champions.pokemon.com/en-us/gameplay" target="_blank" rel="noopener"><div class="site">Official Site</div><div class="title">Gameplay &amp; Battle Modes</div></a>
+      <a class="src-item" href="https://champions.pokemon.com/en-us/pokemon" target="_blank" rel="noopener"><div class="site">Official Site</div><div class="title">Assembling Your Ideal Team</div></a>
+      <a class="src-item" href="https://www.pokemon.com/us/pokemon-news/pokemon-champions-is-now-available-on-nintendo-switch-and-nintendo-switch-2" target="_blank" rel="noopener"><div class="site">pokemon.com</div><div class="title">Launch Announcement</div></a>
+      <a class="src-item" href="https://en.wikipedia.org/wiki/Pok%C3%A9mon_Champions" target="_blank" rel="noopener"><div class="site">Wikipedia</div><div class="title">Pokémon Champions</div></a>
+      <a class="src-item" href="https://www.nintendo.com/us/store/products/pokemon-champions-switch/" target="_blank" rel="noopener"><div class="site">Nintendo Store</div><div class="title">Product Page &amp; Specs</div></a>
+      <a class="src-item" href="https://www.ign.com/articles/pokemon-champions-launch-woes-continue-as-switch-2-players-discover-they-must-manually-dock-and-undock-consoles-for-best-graphics" target="_blank" rel="noopener"><div class="site">IGN</div><div class="title">Switch 2 Dock Bug &amp; Pricing</div></a>
+      <a class="src-item" href="https://www.polygon.com/pokemon-champions-mega-stones-how-to-get/" target="_blank" rel="noopener"><div class="site">Polygon</div><div class="title">All 57 Mega Stones Explained</div></a>
+      <a class="src-item" href="https://www.thegamer.com/pokemon-champions-mega-stones-how-to-equip-where-to-get-guide/" target="_blank" rel="noopener"><div class="site">TheGamer</div><div class="title">How to Equip Mega Stones</div></a>
+      <a class="src-item" href="https://kotaku.com/pokemon-champions-home-transfer-error-9007-2000685757" target="_blank" rel="noopener"><div class="site">Kotaku</div><div class="title">HOME Error 9007 Explained</div></a>
+      <a class="src-item" href="https://www.gamespot.com/articles/pokemon-champions-gave-us-trans-gallade-and-theyre-already-taking-her-away/1100-6539298/" target="_blank" rel="noopener"><div class="site">GameSpot</div><div class="title">Trans Gallade Bug &amp; Fix List</div></a>
+      <a class="src-item" href="https://www.reddit.com/r/NintendoSwitch/comments/1sgowko/pok%C3%A9mon_champions_developer_sincerely_apologizes/" target="_blank" rel="noopener"><div class="site">Reddit</div><div class="title">Developer "Sincerely Apologizes"</div></a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="brand">
+      <img src="pokeball.png" alt="" width="36" height="36" />
+      <span>Pokémon <b style="color:var(--pc-red)">Champions</b> Hub</span>
+    </div>
+    <p>An independent fan resource. Content last updated April 10, 2026.</p>
+    <p class="disclaimer">
+      Pokémon and all related trademarks are property of Nintendo, Game Freak, Creatures Inc. and The Pokémon Company. This site is not affiliated with or endorsed by any of those companies. All source articles are linked to their original publishers.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
