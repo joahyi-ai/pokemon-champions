@@ -8,47 +8,44 @@
 // @grant        none
 // ==/UserScript==
 
-(function() {
-    'use strict';
+(function () {
+  "use strict";
 
-    // 如果在 iframe 中运行则直接退出，防止递归
-    if (window.self !== window.top) return;
+  // 如果在 iframe 中运行则直接退出，防止递归
+  if (window.self !== window.top) return;
 
-    let isUpdating = false;
-    let styleInjected = false;
+  let isUpdating = false;
+  let styleInjected = false;
 
-    function getSearchQuery() {
-        const params = new URLSearchParams(window.location.search);
-        return params.get('q') || '';
-    }
+  function extractResultCount(text) {
+    const match = text.match(/[\d,\.]+/);
+    return match ? match[0] : "0";
+  }
 
-    function extractResultCount(text) {
-        const match = text.match(/[\d,\.]+/);
-        return match ? match[0] : '0';
-    }
+  function isGoogleSearchPage() {
+    const path = window.location.pathname;
+    if (!path.includes("/search")) return false;
 
-    function isGoogleSearchPage() {
-        const path = window.location.pathname;
-        if (!path.includes('/search')) return false;
+    const hasSearchForm =
+      document.querySelector('form[role="search"]') ||
+      document.querySelector('input[name="q"]') ||
+      document.querySelector("#searchform");
+    const hasResultStats = document.querySelector("#result-stats");
+    const hostname = window.location.hostname;
+    const isGoogleDomain =
+      /\.?google\.[a-z]{2,}$/i.test(hostname) ||
+      hostname === "google.com" ||
+      hostname.startsWith("www.google.");
 
-        const hasSearchForm = document.querySelector('form[role="search"]') ||
-                             document.querySelector('input[name="q"]') ||
-                             document.querySelector('#searchform');
-        const hasResultStats = document.querySelector('#result-stats');
-        const hostname = window.location.hostname;
-        const isGoogleDomain = /\.?google\.[a-z]{2,}$/i.test(hostname) ||
-                              hostname === 'google.com' ||
-                              hostname.startsWith('www.google.');
+    return isGoogleDomain && hasSearchForm && hasResultStats;
+  }
 
-        return isGoogleDomain && hasSearchForm && hasResultStats;
-    }
+  function injectStyle() {
+    if (styleInjected) return;
+    styleInjected = true;
 
-    function injectStyle() {
-        if (styleInjected) return;
-        styleInjected = true;
-
-        const style = document.createElement('style');
-        style.textContent = `
+    const style = document.createElement("style");
+    style.textContent = `
             #enhanced-search-stats {
                 display: flex;
                 gap: 12px;
@@ -85,113 +82,73 @@
                 letter-spacing: -0.3px;
             }
 
-            .stats-value.loading {
-                color: #c7c7cc;
-            }
-
             #result-stats {
                 display: none !important;
             }
         `;
-        document.head.appendChild(style);
-    }
+    document.head.appendChild(style);
+  }
 
-    function fetchIntitleCount(query) {
-        return new Promise(function(resolve) {
-            const iframe = document.createElement('iframe');
-            iframe.style.display = 'none';
-            iframe.src = `/search?q=${encodeURIComponent('intitle:"' + query + '"')}`;
-            iframe.onload = function() {
-                try {
-                    const stats = iframe.contentDocument.querySelector('#result-stats');
-                    resolve(stats ? extractResultCount(stats.textContent) : '0');
-                } catch(e) {
-                    resolve('-');
-                } finally {
-                    iframe.remove();
-                }
-            };
-            iframe.onerror = function() {
-                iframe.remove();
-                resolve('-');
-            };
-            document.body.appendChild(iframe);
-        });
-    }
+  function enhanceSearchStats() {
+    if (!isGoogleSearchPage() || isUpdating) return;
 
-    async function enhanceSearchStats() {
-        if (!isGoogleSearchPage() || isUpdating) return;
+    const resultStats = document.querySelector("#result-stats");
+    if (!resultStats) return;
 
-        const resultStats = document.querySelector('#result-stats');
-        if (!resultStats) return;
+    isUpdating = true;
+    injectStyle();
 
-        isUpdating = true;
-        injectStyle();
+    const oldContainer = document.querySelector("#enhanced-search-stats");
+    if (oldContainer) oldContainer.remove();
 
-        const oldContainer = document.querySelector('#enhanced-search-stats');
-        if (oldContainer) oldContainer.remove();
-
-        const totalCount = extractResultCount(resultStats.textContent);
-        const query = getSearchQuery();
-
-        const container = document.createElement('div');
-        container.id = 'enhanced-search-stats';
-        container.innerHTML = `
+    const totalCount = extractResultCount(resultStats.textContent);
+    const container = document.createElement("div");
+    container.id = "enhanced-search-stats";
+    container.innerHTML = `
             <div class="stats-card">
                 <div class="stats-label">Total Results</div>
                 <div class="stats-value">${totalCount}</div>
             </div>
-            <div class="stats-card">
-                <div class="stats-label">intitle:"${query}"</div>
-                <div class="stats-value loading" id="intitle-count">--</div>
-            </div>
         `;
 
-        const searchResults = document.querySelector('#search') ||
-                             document.querySelector('main') ||
-                             document.querySelector('#rso');
+    const searchResults =
+      document.querySelector("#search") ||
+      document.querySelector("main") ||
+      document.querySelector("#rso");
 
-        if (searchResults) {
-            searchResults.insertBefore(container, searchResults.firstChild);
-        } else {
-            resultStats.parentNode.insertBefore(container, resultStats);
-        }
-
-        isUpdating = false;
-
-        const intitleCount = await fetchIntitleCount(query);
-        const intitleEl = document.querySelector('#intitle-count');
-        if (intitleEl) {
-            intitleEl.textContent = intitleCount;
-            intitleEl.classList.remove('loading');
-        }
-    }
-
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', enhanceSearchStats);
+    if (searchResults) {
+      searchResults.insertBefore(container, searchResults.firstChild);
     } else {
-        enhanceSearchStats();
+      resultStats.parentNode.insertBefore(container, resultStats);
     }
 
-    let currentUrl = window.location.href;
-    const urlChangeObserver = new MutationObserver(function() {
-        if (window.location.href !== currentUrl) {
-            currentUrl = window.location.href;
-            setTimeout(enhanceSearchStats, 500);
-        }
-    });
+    isUpdating = false;
+  }
 
-    urlChangeObserver.observe(document, {
-        childList: true,
-        subtree: true
-    });
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", enhanceSearchStats);
+  } else {
+    enhanceSearchStats();
+  }
 
-    window.addEventListener('popstate', function() {
-        setTimeout(function() {
-            if (isGoogleSearchPage()) {
-                enhanceSearchStats();
-            }
-        }, 500);
-    });
+  let currentUrl = window.location.href;
+  const urlChangeObserver = new MutationObserver(function () {
+    if (window.location.href !== currentUrl) {
+      currentUrl = window.location.href;
+      setTimeout(enhanceSearchStats, 500);
+    }
+  });
 
+  urlChangeObserver.observe(document, {
+    childList: true,
+    subtree: true,
+  });
+
+  window.addEventListener("popstate", function () {
+    setTimeout(function () {
+      if (isGoogleSearchPage()) {
+        enhanceSearchStats();
+      }
+    }, 500);
+  });
 })();
